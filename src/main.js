@@ -234,8 +234,6 @@ function dispatch(event) {
     for (const k in _modifier) {
       if (_modifier[k] === key) hotkeys[k] = true;
     }
-
-    if (!asterisk) return;
   }
 
   // 将 modifierMap 里面的修饰键绑定到 event 中
