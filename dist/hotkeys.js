@@ -326,7 +326,7 @@
       } // 调用处理程序，如果是修饰键不做处理
 
 
-      if (handler.mods.length === 0 && !_mods[16] && !_mods[18] && !_mods[17] && !_mods[91] || modifiersMatch || handler.shortcut === '*') {
+      if (handler.mods.length === 0 && !_mods[16] && !_mods[18] && !_mods[17] && !_mods[91] || modifiersMatch || handler.shortcut === '*' || handler.shortcut === event.key.toLowerCase()) {
         if (handler.method(event, handler) === false) {
           if (event.preventDefault) event.preventDefault();else event.returnValue = false;
           if (event.stopPropagation) event.stopPropagation();

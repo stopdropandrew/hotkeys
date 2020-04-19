@@ -181,6 +181,7 @@ function eventHandler(event, handler, scope) {
         && !_mods[91])
       || modifiersMatch
       || handler.shortcut === '*'
+      || handler.shortcut === event.key.toLowerCase()
     ) {
       if (handler.method(event, handler) === false) {
         if (event.preventDefault) event.preventDefault();
